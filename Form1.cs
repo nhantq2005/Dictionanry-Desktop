@@ -12,9 +12,19 @@ namespace Dictionary_Desktop
 {
     public partial class Form1 : Form
     {
+        QuanLyDL ql = new QuanLyDL();
         public Form1()
         {
             InitializeComponent();
+
+            ql.ImportData();
         }
+
+        private void translateBtn_Click(object sender, EventArgs e)
+        {
+            output.Text=ql.LookUpWord(input.Text);
+
+        }
+
     }
 }

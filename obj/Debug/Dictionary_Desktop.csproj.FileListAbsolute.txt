@@ -1,0 +1,10 @@
+D:\C_SHARP_PROJECT\Dictionary_Desktop\obj\Debug\Dictionary_Desktop.csproj.AssemblyReference.cache
+D:\C_SHARP_PROJECT\Dictionary_Desktop\obj\Debug\Dictionary_Desktop.Form1.resources
+D:\C_SHARP_PROJECT\Dictionary_Desktop\obj\Debug\Dictionary_Desktop.csproj.GenerateResource.cache
+D:\C_SHARP_PROJECT\Dictionary_Desktop\bin\Debug\Dictionary_Desktop.exe.config
+D:\C_SHARP_PROJECT\Dictionary_Desktop\bin\Debug\Dictionary_Desktop.exe
+D:\C_SHARP_PROJECT\Dictionary_Desktop\bin\Debug\Dictionary_Desktop.pdb
+D:\C_SHARP_PROJECT\Dictionary_Desktop\obj\Debug\Dictionary_Desktop.Properties.Resources.resources
+D:\C_SHARP_PROJECT\Dictionary_Desktop\obj\Debug\Dictionary_Desktop.csproj.CoreCompileInputs.cache
+D:\C_SHARP_PROJECT\Dictionary_Desktop\obj\Debug\Dictionary_Desktop.exe
+D:\C_SHARP_PROJECT\Dictionary_Desktop\obj\Debug\Dictionary_Desktop.pdb

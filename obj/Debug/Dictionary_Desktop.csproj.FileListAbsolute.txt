@@ -8,3 +8,6 @@ D:\C_SHARP_PROJECT\Dictionary_Desktop\obj\Debug\Dictionary_Desktop.Properties.Re
 D:\C_SHARP_PROJECT\Dictionary_Desktop\obj\Debug\Dictionary_Desktop.csproj.CoreCompileInputs.cache
 D:\C_SHARP_PROJECT\Dictionary_Desktop\obj\Debug\Dictionary_Desktop.exe
 D:\C_SHARP_PROJECT\Dictionary_Desktop\obj\Debug\Dictionary_Desktop.pdb
+D:\C_SHARP_PROJECT\Dictionary_Desktop\obj\Debug\Dictionary_Desktop.EditDataForm.resources
+D:\C_SHARP_PROJECT\Dictionary_Desktop\obj\Debug\Dictionary_Desktop.EditWordFrom.resources
+D:\C_SHARP_PROJECT\Dictionary_Desktop\obj\Debug\Dictionary_Desktop.ViewDataForm.resources

@@ -14,6 +14,7 @@ namespace Dictionary_Desktop
     {
         string word;
         ManageData manageData;
+        EditDataForm editDataForm;
         public EditWordFrom()
         {
             InitializeComponent();
@@ -25,6 +26,13 @@ namespace Dictionary_Desktop
             this.manageData = manageData;
         }
 
+        public EditWordFrom(ManageData manageData, EditDataForm editDataForm)
+        {
+            InitializeComponent();
+            this.manageData = manageData;
+            this.editDataForm = editDataForm;
+        }
+
         public EditWordFrom(ManageData manageData, string word)
         {
             InitializeComponent();
@@ -34,7 +42,7 @@ namespace Dictionary_Desktop
             inputMeaning.Text = manageData.Data[word];
         }
 
-
+        //Bắt sự kiện nút lưu
         private void addBtn_Click(object sender, EventArgs e)
         {
             if (word == null)
@@ -50,9 +58,11 @@ namespace Dictionary_Desktop
                 manageData.AddWord(inputWord.Text,inputMeaning.Text);
             }
             this.Close();
+            editDataForm.LoadData(manageData);
 
         }
 
+        //Bắt sự kiện nút thoát
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             this.Close();

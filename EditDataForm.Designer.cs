@@ -30,8 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditDataForm));
             this.listWord = new System.Windows.Forms.ListView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.searchTB = new System.Windows.Forms.TextBox();
+            this.searchBtn = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
             this.editBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
@@ -43,6 +45,9 @@
             this.listWord.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.listWord.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
             this.listWord.HideSelection = false;
             this.listWord.Location = new System.Drawing.Point(12, 76);
             this.listWord.Name = "listWord";
@@ -50,30 +55,41 @@
             this.listWord.TabIndex = 1;
             this.listWord.UseCompatibleStateImageBehavior = false;
             // 
-            // textBox1
+            // columnHeader1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.columnHeader1.Text = "Từ";
+            this.columnHeader1.Width = 200;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Nghĩa";
+            this.columnHeader2.Width = 300;
+            // 
+            // searchTB
+            // 
+            this.searchTB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Arial", 20F);
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(465, 46);
-            this.textBox1.TabIndex = 2;
+            this.searchTB.Font = new System.Drawing.Font("Arial", 20F);
+            this.searchTB.Location = new System.Drawing.Point(12, 12);
+            this.searchTB.Name = "searchTB";
+            this.searchTB.Size = new System.Drawing.Size(465, 46);
+            this.searchTB.TabIndex = 2;
             // 
-            // button1
+            // searchBtn
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.searchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.AutoSize = true;
-            this.button1.Font = new System.Drawing.Font("Wingdings 3", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.button1.Location = new System.Drawing.Point(492, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 49);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "";
-            this.button1.UseVisualStyleBackColor = true;
+            this.searchBtn.AutoSize = true;
+            this.searchBtn.Font = new System.Drawing.Font("Wingdings 3", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.searchBtn.Location = new System.Drawing.Point(492, 10);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(54, 49);
+            this.searchBtn.TabIndex = 3;
+            this.searchBtn.Text = "";
+            this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // closeBtn
             // 
@@ -133,6 +149,7 @@
             this.deleteBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.deleteBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // addBtn
             // 
@@ -159,8 +176,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 380);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.searchBtn);
+            this.Controls.Add(this.searchTB);
             this.Controls.Add(this.listWord);
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.editBtn);
@@ -186,7 +203,9 @@
         private System.Windows.Forms.Button editBtn;
         private System.Windows.Forms.Button closeBtn;
         private System.Windows.Forms.ListView listWord;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox searchTB;
+        private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }

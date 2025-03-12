@@ -1,6 +1,6 @@
 ﻿namespace Dictionary_Desktop
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.input = new System.Windows.Forms.TextBox();
             this.output = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,12 +38,14 @@
             this.rdENtoVN = new System.Windows.Forms.RadioButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dữLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importDataItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showDataItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportDataItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chỉnhSửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editDataItem = new System.Windows.Forms.ToolStripMenuItem();
             this.translateBtn = new System.Windows.Forms.Button();
-            this.importDataItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tệpHiệnTạiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tệpMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -143,6 +145,14 @@
             this.dữLiệuToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
             this.dữLiệuToolStripMenuItem.Text = "Dữ liệu";
             // 
+            // importDataItem
+            // 
+            this.importDataItem.Image = global::Dictionary_Desktop.Properties.Resources.import;
+            this.importDataItem.Name = "importDataItem";
+            this.importDataItem.Size = new System.Drawing.Size(224, 26);
+            this.importDataItem.Text = "Nhập dữ liệu";
+            this.importDataItem.Click += new System.EventHandler(this.importData_Click);
+            // 
             // showDataItem
             // 
             this.showDataItem.Image = global::Dictionary_Desktop.Properties.Resources.list;
@@ -153,6 +163,9 @@
             // 
             // exportDataItem
             // 
+            this.exportDataItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tệpHiệnTạiToolStripMenuItem,
+            this.tệpMớiToolStripMenuItem});
             this.exportDataItem.Image = global::Dictionary_Desktop.Properties.Resources.export;
             this.exportDataItem.Name = "exportDataItem";
             this.exportDataItem.Size = new System.Drawing.Size(224, 26);
@@ -188,15 +201,19 @@
             this.translateBtn.UseVisualStyleBackColor = true;
             this.translateBtn.Click += new System.EventHandler(this.translateBtn_Click);
             // 
-            // importDataItem
+            // tệpHiệnTạiToolStripMenuItem
             // 
-            this.importDataItem.Image = global::Dictionary_Desktop.Properties.Resources.import;
-            this.importDataItem.Name = "importDataItem";
-            this.importDataItem.Size = new System.Drawing.Size(224, 26);
-            this.importDataItem.Text = "Nhập dữ liệu";
-            this.importDataItem.Click += new System.EventHandler(this.importData_Click);
+            this.tệpHiệnTạiToolStripMenuItem.Name = "tệpHiệnTạiToolStripMenuItem";
+            this.tệpHiệnTạiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tệpHiệnTạiToolStripMenuItem.Text = "Tệp hiện tại";
             // 
-            // Form1
+            // tệpMớiToolStripMenuItem
+            // 
+            this.tệpMớiToolStripMenuItem.Name = "tệpMớiToolStripMenuItem";
+            this.tệpMớiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tệpMớiToolStripMenuItem.Text = "Tệp mới";
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -214,7 +231,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Từ điển Anh-Việt";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -242,6 +259,8 @@
         private System.Windows.Forms.ToolStripMenuItem exportDataItem;
         private System.Windows.Forms.ToolStripMenuItem chỉnhSửaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editDataItem;
+        private System.Windows.Forms.ToolStripMenuItem tệpHiệnTạiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tệpMớiToolStripMenuItem;
     }
 }
 

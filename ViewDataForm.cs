@@ -40,7 +40,7 @@ namespace Dictionary_Desktop
             }
             catch (NullReferenceException)
             {
-                MessageBox.Show("DỮ LIỆU RỖNG");
+                MessageBox.Show("Dữ liệu rỗng","Cảnh báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
     }

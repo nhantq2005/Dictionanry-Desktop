@@ -21,7 +21,7 @@ namespace Dictionary_Desktop
         public void ImportData(string path)
         {
             string errorKey = "";
-
+            //Đọc file
             using (StreamReader reader = new StreamReader(path))
             {
                 try
@@ -38,9 +38,15 @@ namespace Dictionary_Desktop
                 {
                     Console.WriteLine(errorKey);
                 }
+                //Check định dạng file
                 catch(IndexOutOfRangeException) 
                 {
-                    MessageBox.Show("Định dạng file không hợp lệ!");
+                    MessageBox.Show(
+                        "Định dạng nội dung tệp không hợp lệ!",
+                        "Cảnh báo",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                        );
                 }
             }
         }
@@ -51,12 +57,12 @@ namespace Dictionary_Desktop
             try
             {
                 return data[word.ToLower()];
-                //Case key not exist in data
+                //Trường hợp từ không có trong Dictionary
             }catch(KeyNotFoundException)
             {
                 if (data.Keys.Count == 0)
                 {
-                    MessageBox.Show("Bạn chưa nhập dữ liệu");
+                    MessageBox.Show("Bạn chưa nhập dữ liệu","Cảnh báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -68,7 +74,7 @@ namespace Dictionary_Desktop
 
         public string GetWordByMeaning(string meaning)
         {
-            //Remove all leading and trailing white-space and convert to lower case
+            //Bỏ khoảng trắng đầu cuối
             meaning = meaning.Trim().ToLower();
             return data.FirstOrDefault(word => word.Value == meaning).Key;
         }
@@ -78,9 +84,9 @@ namespace Dictionary_Desktop
             data[word]=meaning.ToLower();
         }
 
-        public void DeleteWord()
+        public void DeleteWord(string word)
         {
-
+            data.Remove(word.ToLower());
         }
 
         public void AddWord(string word, string meaning)

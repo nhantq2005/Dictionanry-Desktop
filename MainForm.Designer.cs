@@ -41,11 +41,11 @@
             this.importDataItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showDataItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportDataItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tệpHiệnTạiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tệpMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chỉnhSửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editDataItem = new System.Windows.Forms.ToolStripMenuItem();
             this.translateBtn = new System.Windows.Forms.Button();
-            this.tệpHiệnTạiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tệpMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -81,7 +81,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 17F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(43, 174);
+            this.label2.Location = new System.Drawing.Point(43, 185);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 34);
             this.label2.TabIndex = 7;
@@ -171,6 +171,22 @@
             this.exportDataItem.Size = new System.Drawing.Size(224, 26);
             this.exportDataItem.Text = "Xuất dữ liệu";
             // 
+            // tệpHiệnTạiToolStripMenuItem
+            // 
+            this.tệpHiệnTạiToolStripMenuItem.Image = global::Dictionary_Desktop.Properties.Resources.current_file;
+            this.tệpHiệnTạiToolStripMenuItem.Name = "tệpHiệnTạiToolStripMenuItem";
+            this.tệpHiệnTạiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tệpHiệnTạiToolStripMenuItem.Text = "Tệp hiện tại";
+            this.tệpHiệnTạiToolStripMenuItem.Click += new System.EventHandler(this.tệpHiệnTạiToolStripMenuItem_Click);
+            // 
+            // tệpMớiToolStripMenuItem
+            // 
+            this.tệpMớiToolStripMenuItem.Image = global::Dictionary_Desktop.Properties.Resources.new_file;
+            this.tệpMớiToolStripMenuItem.Name = "tệpMớiToolStripMenuItem";
+            this.tệpMớiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tệpMớiToolStripMenuItem.Text = "Tệp mới";
+            this.tệpMớiToolStripMenuItem.Click += new System.EventHandler(this.tệpMớiToolStripMenuItem_Click);
+            // 
             // chỉnhSửaToolStripMenuItem
             // 
             this.chỉnhSửaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -200,18 +216,6 @@
             this.translateBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.translateBtn.UseVisualStyleBackColor = true;
             this.translateBtn.Click += new System.EventHandler(this.translateBtn_Click);
-            // 
-            // tệpHiệnTạiToolStripMenuItem
-            // 
-            this.tệpHiệnTạiToolStripMenuItem.Name = "tệpHiệnTạiToolStripMenuItem";
-            this.tệpHiệnTạiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.tệpHiệnTạiToolStripMenuItem.Text = "Tệp hiện tại";
-            // 
-            // tệpMớiToolStripMenuItem
-            // 
-            this.tệpMớiToolStripMenuItem.Name = "tệpMớiToolStripMenuItem";
-            this.tệpMớiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.tệpMớiToolStripMenuItem.Text = "Tệp mới";
             // 
             // MainForm
             // 

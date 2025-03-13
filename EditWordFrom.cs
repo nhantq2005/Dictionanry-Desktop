@@ -65,6 +65,15 @@ namespace Dictionary_Desktop
         //Bắt sự kiện nút thoát
         private void cancelBtn_Click(object sender, EventArgs e)
         {
+            if(word == null) {  }
+            if(word!=inputWord.Text || manageData.Data[word]!=inputMeaning.Text)
+            {
+                DialogResult result = MessageBox.Show("Bạn có muốn lưu thay đổi?","Xác nhận",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+                if(result== DialogResult.OK)
+                {
+                    manageData.AddWord(inputWord.Text,inputMeaning.Text);
+                }
+            }
             this.Close();
         }
     }

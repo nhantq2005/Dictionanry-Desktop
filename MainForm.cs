@@ -67,5 +67,20 @@ namespace Dictionary_Desktop
             ViewDataForm vdf= new ViewDataForm(manageData);
             vdf.ShowDialog();
         }
+
+        private void tệpHiệnTạiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            manageData.SaveData();
+        }
+
+        private void tệpMớiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter= "Text File(*.txt)|*.txt";
+            if(sfd.ShowDialog() == DialogResult.OK)
+            {
+                manageData.SaveAsData(sfd.FileName);
+            }
+        }
     }
 }

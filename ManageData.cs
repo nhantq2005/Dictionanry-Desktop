@@ -12,6 +12,7 @@ namespace Dictionary_Desktop
     public class ManageData
     {
         private Dictionary<string, string> data = new Dictionary<string, string>();
+        private string dataPath;
 
         public Dictionary<string, string> Data { 
             get {  return data; } 
@@ -24,6 +25,7 @@ namespace Dictionary_Desktop
             //Đọc file
             using (StreamReader reader = new StreamReader(path))
             {
+                dataPath = path;
                 try
                 {
                     string line;
@@ -101,9 +103,30 @@ namespace Dictionary_Desktop
             }
         }
 
-        public void ExportData()
+        public void SaveData()
         {
+            using(StreamWriter f = new StreamWriter(dataPath))
+            {
 
+                foreach (var word in data)
+                {
+                    f.WriteLine(String.Format("{0}:{1}", word.Key,word.Value));
+                }
+                MessageBox.Show("Xuất dữ liệu thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+            }
+        }
+
+        public void SaveAsData(string path)
+        {
+            using (StreamWriter f = new StreamWriter(path))
+            {
+
+                foreach (var word in data)
+                {
+                    f.WriteLine(String.Format("{0}:{1}", word.Key, word.Value));
+                }
+                MessageBox.Show("Xuất dữ liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
     }
 }

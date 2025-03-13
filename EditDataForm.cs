@@ -68,7 +68,6 @@ namespace Dictionary_Desktop
                 string choosenWord = listWord.SelectedItems[0].Text;
                 EditWordFrom ewf = new EditWordFrom(manageData, choosenWord);
                 ewf.ShowDialog();
-                this.Refresh();
             }
             catch
             {
